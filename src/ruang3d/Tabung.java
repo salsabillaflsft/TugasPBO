@@ -7,10 +7,6 @@ package ruang3d;
 
 import bidang2d.Lingkaran;
 
-/**
- *
- * @author HP
- */
 public class Tabung extends Lingkaran{
      private double tinggi;
     
