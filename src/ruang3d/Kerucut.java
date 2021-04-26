@@ -13,6 +13,10 @@ import bidang2d.Lingkaran;
  */
 public class Kerucut extends Lingkaran{
      private double tinggi;
+
+    public Kerucut(double jari) {
+        super(jari);
+    }
      
        public double hitungLuas(){
           return 0;

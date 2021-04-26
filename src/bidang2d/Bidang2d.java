@@ -11,6 +11,7 @@ package bidang2d;
  * @author HP
  */
 public interface Bidang2d {
+     
      double jari = 0;
      double panjang = 0;
      double lebar = 0;

@@ -9,14 +9,21 @@ import bidang2d.Lingkaran;
 
 public class Tabung extends Lingkaran{
      private double tinggi;
-    
-      public double hitungLuas(){
-          return 0;
-      
-      }
-       public double hitungVolume(){
-          return 0;
-      
-      }
+     
+       public Tabung(double jari, double tinggi){
+       super(jari);
+       this.tinggi = tinggi;
+    }
+
+    public double getVolume() {
+        double VolumeTabung = (super.hitungLuas()*tinggi);
+        return VolumeTabung;
+    }
+
+    public double getLuasPermukaan() {
+        double luasSelimut= super.hitungKeliling()*tinggi;
+        double LuasPermukaanTabung = 2* super.hitungLuas() + luasSelimut;
+        return LuasPermukaanTabung;
+    }
     
 }

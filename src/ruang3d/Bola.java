@@ -13,5 +13,9 @@ import bidang2d.Lingkaran;
  */
 public class Bola extends Lingkaran{
     
+    public Bola(double jari) {
+        super(jari);
+    }
+    
     
 }

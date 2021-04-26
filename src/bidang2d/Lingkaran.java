@@ -4,14 +4,15 @@ public class Lingkaran implements Bidang2d{
     double luas;
     double keliling;
     double jari;
+    
+    public Lingkaran(double jari) {
+        this.jari = jari;
+    }
 
-    public double getR() {
+    public double getJari() {
         return jari;
     }
-
-    public void setR(double r) {
-        this.jari = r;
-    }
+    
 
     @Override
     public double hitungKeliling() {

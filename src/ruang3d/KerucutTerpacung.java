@@ -11,4 +11,8 @@ package ruang3d;
  */
 public class KerucutTerpacung extends Kerucut{
     
+    public KerucutTerpacung(double jari) {
+        super(jari);
+    }
+    
 }

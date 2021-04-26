@@ -14,6 +14,10 @@ public class TemberengBola extends Bola{
     protected double tinggi;	
     protected double LuasTembereng;	
     protected double VolumeTembereng;
+
+    public TemberengBola(double jari) {
+        super(jari);
+    }
     
     public double hitungLuas(){
           return 0;

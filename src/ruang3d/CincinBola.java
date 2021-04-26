@@ -10,6 +10,10 @@ package ruang3d;
  * @author HP
  */
 public class CincinBola extends Bola{
+
+    public CincinBola(double jari) {
+        super(jari);
+    }
     
     
       public double hitungLuas(){

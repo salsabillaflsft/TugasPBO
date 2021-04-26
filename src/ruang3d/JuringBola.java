@@ -13,6 +13,10 @@ public class JuringBola extends Bola{
     protected double tinggi;
     protected double luasJuring;
     protected double VolumeJuring;
+
+    public JuringBola(double jari) {
+        super(jari);
+    }
     
      public double hitungLuas(){
           return 0;
