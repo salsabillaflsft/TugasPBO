@@ -1,37 +1,22 @@
 package bidang2d;
 
 public class Lingkaran implements Bidang2d{
-    double luas;
-    double keliling;
-    double jari;
     
-    public Lingkaran(double jari) {
-        this.jari = jari;
-    }
+    public double r, keliling, luas;
 
-    public double getJari() {
-        return jari;
+    public Lingkaran(double r){
+        this.r = r;
+        this.keliling = hitungKeliling();
+        this.luas = hitungLuas();
     }
-    
 
     @Override
     public double hitungKeliling() {
-        System.out.println("Keliling Lingkaran: " + hitungKeliling(jari));
-        return 0;
+        return 2 *  r * Math.PI;
     }
-    public double hitungKeliling(double jari) {
-        keliling = 2 * jari * Math.PI;
-        return keliling;
-    }
-
 
     @Override
     public double hitungLuas() {
-        System.out.println("Luas Lingkaran: " + hitungLuas(jari));
-        return 0;
-    }
-    public double hitungLuas(double jari) {
-        luas = jari * jari * Math.PI;
-        return luas;
+        return r * r * Math.PI;
     }
 }
