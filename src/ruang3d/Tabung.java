@@ -5,7 +5,7 @@
  */
 package ruang3d;
 
-import bidang2.Lingkaran;
+import bidang2d.Lingkaran;
 
 /**
  *
