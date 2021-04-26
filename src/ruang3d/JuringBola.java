@@ -14,12 +14,14 @@ public class JuringBola extends Bola{
     protected double luasJuring;
     protected double VolumeJuring;
     
-    
-      public void hitungLuas(){
+     public double hitungLuas(){
+          return 0;
       
       }
-       public void hitungVolume(){
+       public double hitungVolume(){
+          return 0;
       
       }
+   
     
 }

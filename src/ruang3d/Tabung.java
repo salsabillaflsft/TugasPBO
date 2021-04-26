@@ -10,12 +10,13 @@ import bidang2d.Lingkaran;
 public class Tabung extends Lingkaran{
      private double tinggi;
     
-      public void hitungLuas(){
+      public double hitungLuas(){
+          return 0;
       
       }
-       public void hitungVolume(){
+       public double hitungVolume(){
+          return 0;
       
       }
-      
     
 }

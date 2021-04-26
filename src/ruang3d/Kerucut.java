@@ -14,10 +14,12 @@ import bidang2d.Lingkaran;
 public class Kerucut extends Lingkaran{
      private double tinggi;
      
-     public void hitungKeliling(){
-     }
-     
-     public void hitungLuas(){
-     }
-    
+       public double hitungLuas(){
+          return 0;
+      
+      }
+       public double hitungVolume(){
+          return 0;
+      
+      }
 }

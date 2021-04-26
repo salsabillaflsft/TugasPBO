@@ -12,10 +12,12 @@ package ruang3d;
 public class CincinBola extends Bola{
     
     
-      public void hitungLuas(){
+      public double hitungLuas(){
+          return 0;
       
       }
-       public void hitungVolume(){
+       public double hitungVolume(){
+          return 0;
       
       }
     

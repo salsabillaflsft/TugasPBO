@@ -18,6 +18,6 @@ public interface Bidang2d {
      double keliling = 0;
      double luas = 0;
      
-     void hitungKeliling();
-     void hitungLuas();
+     double hitungKeliling();
+     double hitungLuas();
 }

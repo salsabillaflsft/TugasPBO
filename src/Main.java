@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
        char y_t;
         Scanner input = new Scanner(System.in);
-        float set_r;
+        float r;
         int menu;
         Lingkaran lingkaran = new Lingkaran();
         Bola bola = new Bola();
@@ -28,8 +28,11 @@ public class Main {
                 case 1:
                     System.out.println("===========LINGKARAN===========");
                     System.out.println("Masukkan ukuran jari-jari : ");
-                    set_r = input.nextInt();
-                   
+                    r = input.nextInt();
+                    lingkaran.setR(r);
+                    lingkaran.hitungLuas();
+                    lingkaran.hitungKeliling();
+                    
                     break;
 
                 case 2:
