@@ -1,4 +1,11 @@
 
+/*
+Kelompok:
+1. Muhammad Akli Adnan 123180015
+2. Ova Arjun Kusuma 123180050
+3. Salsabilla Filsafati 123180144 
+4. Hashfi Ramadhani 123190162
+*/
 import bidang2d.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
