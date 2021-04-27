@@ -15,7 +15,6 @@ public class Kerucut extends Lingkaran{
         return Math.sqrt(Math.pow(r,2) + Math.pow(tinggi,2));
     }
    
-
     @Override
     public double hitungLuas(){
         return super.luas+(Math.PI*r*s());
@@ -23,5 +22,9 @@ public class Kerucut extends Lingkaran{
 
     public double hitungVolume(){
         return super.luas*tinggi/3;
+    }
+    
+    public double getTinggi(){
+        return tinggi;
     }
 }

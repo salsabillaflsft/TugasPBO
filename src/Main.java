@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         char y_t;
         Scanner input = new Scanner(System.in);
-        double r, tinggi, rkecil;
+        double r = 0, tinggi = 0, rkecil=0, rbawah=0, ratas=0, tali=0;
         int menu,menukerucut,menubola;
 
         do {
@@ -18,7 +18,7 @@ public class Main {
             System.out.println("1. Lingkaran");
             System.out.println("2. Tabung");
             System.out.println("3. Kerucut, Kerucut Terpancung");
-            System.out.println("4. Bola, Cincin Bola, Tembereng Bola, Keratan Bola");
+            System.out.println("4. Bola, Cincin Bola, Tembereng Bola, Keratan Bola, Juring Bola");
             System.out.println("5. Exit");
             System.out.print("Pilih menu : ");      
             try {
@@ -103,7 +103,9 @@ public class Main {
                                 rkecil = input.nextDouble();
                                 System.out.print("Masukkan tinggi kerucut : ");
                                 tinggi = input.nextDouble();
-                                KerucutTerpancung kerucutTerpancung = new KerucutTerpancung(r,rkecil,tinggi);
+                                
+                                KerucutTerpacung kerucutTerpancung = new KerucutTerpacung(r,rkecil,tinggi);
+                                
                                 System.out.println("Luas Permukaan Kerucut Terpancung adalah " + kerucutTerpancung.permukaanKerucut);
                                 System.out.println("Volume Kerucut Terpancung adalah " + kerucutTerpancung.volumeKerucut);
                           
@@ -129,6 +131,8 @@ public class Main {
                     System.out.println("2. Cincin Bola");
                     System.out.println("3. Tembereng Bola");
                     System.out.println("4. Keratan Bola");
+                    System.out.println("5. Juring Bola");
+
                     System.out.print("Pilih : ");
                     try {
                         menubola= input.nextInt();
@@ -155,9 +159,21 @@ public class Main {
                         case 2: {
                             System.out.println("===========Cincin Bola===========");
                             try{
+                                System.out.print("Masukkan jari-jari Bola: ");
+                                r = input.nextDouble();
+                                System.out.print("Masukkan jari-jari atas: ");
+                                ratas = input.nextDouble();
+                                System.out.print("Masukkan jari-jari bawah: ");
+                                rbawah = input.nextDouble();
+                                System.out.print("Masukkan tinggi: ");
+                                tinggi = input.nextDouble();
+                                System.out.print("Masukkan panjang tali: ");
+                                tali = input.nextDouble();
+                                CincinBola cincinBola = new CincinBola(r,ratas,rbawah,tali,tinggi);
 
-                                
-                                
+                                System.out.println("Luas Cincin Bola= " + cincinBola.luas);
+                                System.out.println("Volume Cincin Bola= " + cincinBola.volume);
+
                             }catch(InputMismatchException e){
                                 System.err.println("Input berupa Angka!");
                                 y_t = input.next().charAt(0);
@@ -189,6 +205,38 @@ public class Main {
                         case 4: {
                             System.out.println("===========Keratan Bola===========");
                             try{
+                                System.out.print("Masukkan jari-jari Bola: ");
+                                r = input.nextDouble();
+                                System.out.print("Masukkan jari-jari atas: ");
+                                ratas = input.nextDouble();
+                                System.out.print("Masukkan jari-jari bawah: ");
+                                rbawah = input.nextDouble();
+                                System.out.print("Masukkan tinggi: ");
+                                tinggi = input.nextDouble();
+                                
+                                KeratanBola keratanBola = new KeratanBola(r,ratas,rbawah,tinggi);
+                                System.out.println("Luas Keratan Bola = " + keratanBola.luas);
+                                System.out.println("Volume Keratan Bola= " + keratanBola.volume);
+                         
+                                
+                            }catch(InputMismatchException e){
+                                System.err.println("Input berupa Angka!");
+                                y_t = input.next().charAt(0);
+                            }
+                            break;
+                        }
+                        case 5: {
+                            System.out.println("===========Juring Bola===========");
+                            try{
+                                System.out.print("Masukkan jari-jari Bola: ");
+                                r = input.nextDouble();
+                                System.out.print("Masukkan jari-jari bawah: ");
+                                rbawah = input.nextDouble();
+                                System.out.print("Masukkan tinggi: ");
+                                tinggi = input.nextDouble();
+                                JuringBola juringBola = new JuringBola(r,tinggi,rbawah);
+                                System.out.println("Luas Juring Bola = " + juringBola.luas);
+                                System.out.println("Volume Juring Bola= " + juringBola.volume);
                          
                                 
                             }catch(InputMismatchException e){
@@ -217,3 +265,4 @@ public class Main {
 
 
 }
+ 

@@ -8,13 +8,15 @@ public class TemberengBola extends Bola{
     public TemberengBola(double r, double tinggi){	
         super(r);	
         this.tinggi = tinggi;
+        this.LuasTembereng = hitungLuas();
+        this.VolumeTembereng = hitungVolume();
     }	
 
-    public void getLuasPermukaan() {	
-        LuasTembereng = super.hitungLuas() * tinggi;	
+    public double hitungLuas() {	
+        return super.hitungLuas()*tinggi;	
     }	
 
-    public void getVolume() {	
-        VolumeTembereng = (Math.PI * Math.pow(tinggi, 2) * (3 * r - tinggi))/3;	
+    public double hitungVolume() {	
+        return (Math.PI * Math.pow(tinggi,2)*(3.0 * r - tinggi))/3.0;	
     }
 }
