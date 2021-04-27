@@ -1,7 +1,6 @@
 package bidang2d;
 
 public class Lingkaran implements Bidang2d{
-    
     public double r, keliling, luas;
 
     public Lingkaran(double r){

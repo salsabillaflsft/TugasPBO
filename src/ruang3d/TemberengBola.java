@@ -1,30 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ruang3d;
 
-/**
- *
- * @author HP
- */
 public class TemberengBola extends Bola{
-    
+ 
     protected double tinggi;	
-    protected double LuasTembereng;	
-    protected double VolumeTembereng;
+    public double LuasTembereng, VolumeTembereng;	
 
-    public TemberengBola(double jari) {
-        super(jari);
+    public TemberengBola(double r, double tinggi){	
+        super(r);	
+        this.tinggi = tinggi;
+    }	
+
+    public void getLuasPermukaan() {	
+        LuasTembereng = super.hitungLuas() * tinggi;	
+    }	
+
+    public void getVolume() {	
+        VolumeTembereng = (Math.PI * Math.pow(tinggi, 2) * (3 * r - tinggi))/3;	
     }
-    
-    public double hitungLuas(){
-          return 0;
-      
-      }
-       public double hitungVolume(){
-          return 0;
-      
-      }
 }

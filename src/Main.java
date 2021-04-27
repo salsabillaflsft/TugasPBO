@@ -103,12 +103,9 @@ public class Main {
                                 rkecil = input.nextDouble();
                                 System.out.print("Masukkan tinggi kerucut : ");
                                 tinggi = input.nextDouble();
-                                
-                                //KerucutTerpancung kerucutTerpancung = new KerucutTerpancung(r,rkecil,tinggi);
-
-                            
-                                //System.out.println("Luas Permukaan Kerucut Terpancung adalah " + kerucutTerpancung.lp);
-                                //System.out.println("Volume Kerucut Terpancung adalah " + kerucutTerpancung.volume);
+                                KerucutTerpancung kerucutTerpancung = new KerucutTerpancung(r,rkecil,tinggi);
+                                System.out.println("Luas Permukaan Kerucut Terpancung adalah " + kerucutTerpancung.permukaanKerucut);
+                                System.out.println("Volume Kerucut Terpancung adalah " + kerucutTerpancung.volumeKerucut);
                           
                             }catch(InputMismatchException e){
                                 System.err.println("Input berupa Angka!");
@@ -143,9 +140,12 @@ public class Main {
                         case 1: {
                             System.out.println("===========BOLA===========");
                             try{
-                          
-                                
-                                
+                            System.out.println("== Bola ==");
+                            System.out.print("Masukkan jari-jari : ");
+                            r = input.nextDouble();
+                            Bola bola = new Bola(r);
+                            System.out.println("Luas Permukaan Bola adalah " + bola.lp);
+                            System.out.println("Volume Bola adalah " + bola.volume);                    
                             }catch(InputMismatchException e){
                                 System.err.println("Input berupa Angka!");
                                 y_t = input.next().charAt(0);
@@ -155,7 +155,8 @@ public class Main {
                         case 2: {
                             System.out.println("===========Cincin Bola===========");
                             try{
-                         
+
+                                
                                 
                             }catch(InputMismatchException e){
                                 System.err.println("Input berupa Angka!");
@@ -166,8 +167,19 @@ public class Main {
                         case 3: {
                             System.out.println("===========Tembereng Bola===========");
                             try{
-                         
-                                
+                            System.out.print("Masukkan jari-jari Bola (R): ");
+                            r = input.nextDouble();
+                            do{
+                                System.out.print("Masukkan tinggi tembereng : ");
+                                tinggi = input.nextDouble();
+                                if(tinggi>=r){
+                                    System.err.println("Tinggi tembereng tidak melebihi jari-jari!");
+                                }
+                            }while(tinggi >= r);
+                            TemberengBola tembereng = new TemberengBola(r, tinggi);
+                            System.out.println("Luas Permukaan Tembereng Bola adalah " + tembereng.LuasTembereng);
+                            System.out.println("Volume Tembereng Bola adalah " + tembereng.VolumeTembereng); 
+        
                             }catch(InputMismatchException e){
                                 System.err.println("Input berupa Angka!");
                                 y_t = input.next().charAt(0);
@@ -192,7 +204,7 @@ public class Main {
                             break;
                         }
                     }
-                    break;
+                    break;  
 
                 default:
                     break;
